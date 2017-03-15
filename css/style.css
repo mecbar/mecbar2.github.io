@@ -1,0 +1,87 @@
+/* Custom Stylesheet */
+/**
+ * Use this file to override Materialize files so you can update
+ * the core Materialize files in the future
+ *
+ * Made By MaterializeCSS.com
+ */
+body {
+ font-family: 'Raleway', sans-serif; 
+}
+
+nav ul a,
+nav .brand-logo {
+  color : #a3333d;
+  font-family: 'Satisfy', cursive;
+
+}
+
+h1.brand-logo {
+  color : #a3333d;
+  font-family: 'Satisfy', cursive;
+
+}
+
+.nav-wrapper{
+    padding-left: 2%;
+  padding-right: 2%;
+}
+
+p {
+  line-height: 3rem;
+}
+
+.button-collapse {
+  color: #f64740;
+}
+
+.parallax-container {
+  min-height: 420px;
+  line-height: 0;
+  height: auto;
+  color:#a3333d;
+}
+  .parallax-container .section {
+    width: 100%;
+  }
+
+@media only screen and (max-width : 992px) {
+  .parallax-container .section {
+    position: absolute;
+    top: 40%;
+  }
+  #index-banner .section {
+    top: 10%;
+  }
+}
+
+@media only screen and (max-width : 600px) {
+  #index-banner .section {
+    top: 0;
+  }
+}
+
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+  font-size: inherit;
+}
+
+footer.page-footer {
+  margin: 0;
+}
+
+/*********** social *******/
+.social-icon {
+  font-size:1.5em ;
+  color : blue ;
+  text-align :center;
+  padding : 0% 1% 0% 1%;
+}
+
+.social-icon :hover {
+  font-size : 2em;
+  color : red ;
+
+}
