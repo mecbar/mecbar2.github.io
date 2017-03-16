@@ -85,3 +85,9 @@ footer.page-footer {
   color : red ;
 
 }
+.rowcenter {
+  color : white;
+  font-size :2em ;
+  background-color :  #C42929;
+  text-align: center;
+}
