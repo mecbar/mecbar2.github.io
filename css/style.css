@@ -62,7 +62,7 @@ p {
 }
 
 .icon-block {
-  padding: 0 15px;
+  padding: 4% 7% 4% 7%;
 }
 .icon-block .material-icons {
   font-size: inherit;
@@ -83,12 +83,19 @@ footer.page-footer {
 .social-icon :hover {
   font-size : 2em;
   color : red ;
-
 }
+
+.icon-block :hover {
+  font-size : 2em;
+  color : red ;
+}
+
 .rowcenter {
   color : white;
   font-size :2em ;
   background-color :  #C42929;
   text-align: center;
 }
+
+
 
