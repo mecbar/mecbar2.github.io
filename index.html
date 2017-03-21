@@ -10,6 +10,12 @@
   <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="https://fonts.googleapis.com/css?family=Raleway|Satisfy" rel="stylesheet">
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+ 
+  <script src="js/app.js"></script> 
+
   <!-- sumome  link social -->
   <script src="//load.sumome.com/" data-sumo-site-id="98711fc4997a561007230296cfc67bf8fe083e4799bea5270763985560b583ec" async="async"></script>
   <!-- font x icone social + email -->
@@ -131,6 +137,62 @@
     </div>
    </div>
   </div>
+
+<!-- esempio angularls -->
+<br>
+<br>
+<section class="angular">
+  <br>
+ <div class="container">
+<div class="row">
+ <h3 align='center' >Esempio form con AngularJs </h3> 
+<br>
+<br>
+<div ng-app="">
+<h4 class="center brown-text">Inserisci il tuo nome :</h4>
+  <div class="input-field col s12 l6 offset-l3">
+  <input class="center black-text" type="text" ng-model="nome">
+
+  <h5 class="center red-text">Hello, {{nome}}</h5>
+</div>
+</div>
+</div>
+</div>
+</section>
+ <!--    
+            <br>
+   <div ng-app="mecbar">
+              <br>
+  <section ng-init="risultato=false" 
+          ng-controller="MenuGenerale" >
+          
+   <div ng-form="forma" class="form-group" novalidate>
+    <form method=""  name="reviewForm" >
+          
+     <br>
+       
+    <label for ="input_test" class=”control-label” > Inserisci il tuo nome : </label>
+    <input  ng-model="test" class=”form-control” type="text" name="input_test"  value=" "  required> </input>    
+
+<br>
+<br>
+ <blockquote><cite> Ciao, </cite> {{ test }} 
+          </blockquote>
+
+
+<aside>      
+    <p><input type="submit"  value="Search"	class= ”btn btn-primary” ></p>
+    
+    
+     <p> <input type="reset" value="Reset"></p>
+     
+    
+     <a type="button" id="esci"  class="btn btn-danger"  class=”form-control-static2” href="/index">Home</a>  
+ </aside>
+   </form>
+   </section>
+   </div>
+-->
 
 
   <div class="container">
