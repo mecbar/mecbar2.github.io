@@ -160,7 +160,7 @@
 </div>
 </section>
 
-
+<!--
 <section class="angular2" ng-app="mecbar">
   <br>
  
@@ -169,31 +169,33 @@
  <h3 align='center' >Esempio di template AngularJs per inserire Operazioni </h3> 
 <br>
 <br>
-<div ng-controller="MenuCtrl">
+<div ng-controller="MenuCtrl as mc" ng-submit="mc.addOperation(operation)" >
   <label for "opearation_search" >
   <input class="form-group" type="text" name="name_search" ng-model="search.operation" >
 <br>
 <br>
 <br>
 
- <form role="form" novalidate>
-  <label for="operation" class="form-group">Inserisci nuova operazione:</label>
-  <input class="form-group" type="text" name="name" ng-model="operation.name" >
-  <button class="btn btn-registrazione" type ="submit" ng-click="addOperation(operation)" >Add Operation</button>
- </form>
-  <br>
+ <form role="form"  novalidate>
+  <label for="operation" class="center brown-text">Inserisci nuova operazione:</label>
+  <input ng-model="mc.operation" class="center brown-text" type="text" name="operation" >
+  <button class="btn btn-registrazione" type ="submit" ng-click="mc.opera(true)" >Add Operation</button>
+  <br> {{ mc.operation }}
 <div="row">
 <div>
   <h5  class="center red-text" ng-show="!operationList.length" >
     Non ci sono ancora operation registrate</h5>
 </div>
- <div  ng-show="operationList.length" ng-repeat="oper in operationList | filter:search.operation">Operation name : {{oper}} 
+ <div  ng-show="mc.opera">
+ <ul> lista operazioni</ul>
+   <li class="center red-text" ng-repeat="oper in operationList "> Operation name : {{oper}} </li>
   </div>
 
+</form>
 </div>
 </div>
  </div>
- </div>
+ 
 </section>
  <!--    
             <br>
