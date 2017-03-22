@@ -145,19 +145,55 @@
   <br>
  <div class="container">
 <div class="row">
- <h3 align='center' >Esempio form con AngularJs </h3> 
+ <h3 align='center' >Esempio di form con AngularJs </h3> 
 <br>
 <br>
 <div ng-app="">
-<h4 class="center brown-text">Inserisci il tuo nome :</h4>
+-<h4 class="center brown-text">Inserisci il tuo nome :</h4>
   <div class="input-field col s12 l6 offset-l3">
-  <input class="center black-text" type="text" ng-model="nome">
+  <input class="center black-text" type="text" name="nome" ng-model="nome" >
 
-  <h5 class="center red-text">Hello, {{nome}}</h5>
+  <h5  class="center red-text" ng-show="nome" >Hello, {{nome}}</h5>
 </div>
 </div>
 </div>
 </div>
+</section>
+
+
+<section class="angular2" ng-app="mecbar">
+  <br>
+ 
+ <div class="container">
+<div class="row">
+ <h3 align='center' >Esempio di template AngularJs per inserire Operazioni </h3> 
+<br>
+<br>
+<div ng-controller="MenuCtrl">
+  <label for "opearation_search" >
+  <input class="form-group" type="text" name="name_search" ng-model="search.operation" >
+<br>
+<br>
+<br>
+
+ <form role="form" novalidate>
+  <label for="operation" class="form-group">Inserisci nuova operazione:</label>
+  <input class="form-group" type="text" name="name" ng-model="operation.name" >
+  <button class="btn btn-registrazione" type ="submit" ng-click="addOperation(operation)" >Add Operation</button>
+ </form>
+  <br>
+<div="row">
+<div>
+  <h5  class="center red-text" ng-show="!operationList.length" >
+    Non ci sono ancora operation registrate</h5>
+</div>
+ <div  ng-show="operationList.length" ng-repeat="oper in operationList | filter:search.operation">Operation name : {{oper}} 
+  </div>
+
+</div>
+</div>
+ </div>
+ </div>
 </section>
  <!--    
             <br>
