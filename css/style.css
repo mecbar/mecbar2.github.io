@@ -61,6 +61,16 @@ p {
   }
 }
 
+/* For mobile phones: */
+[class="video1"] {
+    width: 100%;
+}
+
+@media only screen and (max-width : 600px) {
+  .video1 {
+    top: 0;
+  }
+}
 .icon-block {
   padding: 4% 7% 4% 7%;
 }
