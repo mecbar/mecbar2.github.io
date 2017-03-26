@@ -101,6 +101,46 @@ footer.page-footer {
   background-color: #F79D65
 }
 
+/**** amgular  ***************/
+
 .angular {
-  background-color: lightgreen
+  background-color: lightgreen;
+  font-family: 'Satisfy', cursive;
 }
+
+.angular2 {
+  background-color: whitesmoke ;
+  font-size: 2em;
+  font-family: 'Satisfy', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    font-size: 1em;
+    font-family: 'Satisfy', sans-serif;
+
+}
+
+.button {
+    background-color : orangered; /* blue */
+    border: none;
+    color: white;
+    padding: 8px 80px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 23px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.button:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+} 
+
+#elenco {
+  display:none;
+}
+
+

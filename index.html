@@ -6,6 +6,7 @@
   <title>MecBar</title>
 
   <!-- CSS  -->
+  <script src="js/jquery-3.1.1.min.js"></script>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="https://fonts.googleapis.com/css?family=Raleway|Satisfy" rel="stylesheet">
@@ -76,24 +77,23 @@
     <div class="section no-pad-bot">
       <div class="container">
         <div class="row center">
-          <h5 class="header col s12 light white-text ">Non avere limiti  I tuoi obiettivi ti aspettano</h5>
+          <h5 class="header col s12 light white-text ">Looking a modern responsive front-end framework</h5>
         </div>
       </div>
     </div>
     <div class="parallax"><img src="back2.jpg" alt="Unsplashed background img 2"></div>
   </div>
 
-
+  <!-- QUESTIONARIO -->
+ <div class="section1" id="cono">
   <div class="container">
-    <div class="section1" id="cono">
-
-   <!--     Icon Section  -->   
-     <div class="row">
-       <h4 class="center brown-text">Inserire un Questionario </h4>
-     </div> 
-     <div class="row">
-        <div class="col s12 m6">
-          <div class="icon-block center">
+    <br>
+   <div class="row">
+       <h4 class="center brown-text">Esempio inserimento Questionario </h4>
+   </div> 
+   <div class="row">
+      <div class="col s12 m6">
+       <div class="icon-block center">
           
           <!--  <h2 class="center brown-text"><i class="material-icons">flash_on</i></h2>
             <h5 class="center">Speeds up developmen-t</h5>
@@ -120,7 +120,7 @@
      <div class="container">
       <div class="row">
       <div class="section  center">
-        <h4 class="center brown-text">Inserire mail per iscriversi nella MailingList</h4>
+        <h4 class="center brown-text">Esempio richiesta di inserire mail per iscriversi nella Mailing List</h4>
        <div class="input-field col s12 l6 offset-l3">
            <!-- inserire email x mail list-->
            <br>
@@ -141,14 +141,14 @@
 <!-- esempio angularls -->
 <br>
 <br>
-<section class="angular">
+<section class="angular" ng-app="mecbar">
   <br>
  <div class="container">
 <div class="row">
  <h3 align='center' >Esempio di form con AngularJs </h3> 
 <br>
 <br>
-<div ng-app="">
+<div>
 -<h4 class="center brown-text">Inserisci il tuo nome :</h4>
   <div class="input-field col s12 l6 offset-l3">
   <input class="center black-text" type="text" name="nome" ng-model="nome" >
@@ -158,81 +158,44 @@
 </div>
 </div>
 </div>
-</section>
 
-<!--
-<section class="angular2" ng-app="mecbar">
+
+<!-- angular vista elenco nazioni -->
+
+<div class="angular2">
+   <br>
+   <h3 class="center brown-text"> Elenco Nazioni : esempio creato con AngularJs <cite>(direttive ng-repeat ng-show) </cite> </h3>
+ <p class="center"> <button id="but1" class="button" name="button"> Visualizza  elenco </button>  
+ <button id="nascondi" class="button" name="button"> Nascondi elenco </button> 
+ </p>
   <br>
- 
- <div class="container">
-<div class="row">
- <h3 align='center' >Esempio di template AngularJs per inserire Operazioni </h3> 
-<br>
-<br>
-<div ng-controller="MenuCtrl as mc" ng-submit="mc.addOperation(operation)" >
-  <label for "opearation_search" >
-  <input class="form-group" type="text" name="name_search" ng-model="search.operation" >
-<br>
-<br>
-<br>
+<div id="elenco">
+ <table  style="width:100%" ng-controller="NationListCtrl">
+   <tr>
+    <th>Numero</th>
+    <th>Codice</th>
+    <th>Nazione</th>
+   </tr>
+       <tbody ng-repeat="nation in nations">
+        <tr   ng-repeat="(key,value) in nation">
+        <td>  {{ key +1 }} </td> 
+        <td> {{ value.code }} </td>
+        <td> {{ value.name }} </td>
+ <!--  <tbody ng-repeat="nation in nations">
+     <td>{{nation.code}} </td>
+     <td>{{nation.name}} </td> 
+  --> 
+   </tbody>
+ </table>
 
- <form role="form"  novalidate>
-  <label for="operation" class="center brown-text">Inserisci nuova operazione:</label>
-  <input ng-model="mc.operation" class="center brown-text" type="text" name="operation" >
-  <button class="btn btn-registrazione" type ="submit" ng-click="mc.opera(true)" >Add Operation</button>
-  <br> {{ mc.operation }}
-<div="row">
-<div>
-  <h5  class="center red-text" ng-show="!operationList.length" >
-    Non ci sono ancora operation registrate</h5>
-</div>
- <div  ng-show="mc.opera">
- <ul> lista operazioni</ul>
-   <li class="center red-text" ng-repeat="oper in operationList "> Operation name : {{oper}} </li>
-  </div>
-
-</form>
-</div>
-</div>
  </div>
- 
+
+</div>
 </section>
- <!--    
-            <br>
-   <div ng-app="mecbar">
-              <br>
-  <section ng-init="risultato=false" 
-          ng-controller="MenuGenerale" >
-          
-   <div ng-form="forma" class="form-group" novalidate>
-    <form method=""  name="reviewForm" >
-          
-     <br>
-       
-    <label for ="input_test" class=”control-label” > Inserisci il tuo nome : </label>
-    <input  ng-model="test" class=”form-control” type="text" name="input_test"  value=" "  required> </input>    
-
-<br>
-<br>
- <blockquote><cite> Ciao, </cite> {{ test }} 
-          </blockquote>
 
 
-<aside>      
-    <p><input type="submit"  value="Search"	class= ”btn btn-primary” ></p>
-    
-    
-     <p> <input type="reset" value="Reset"></p>
-     
-    
-     <a type="button" id="esci"  class="btn btn-danger"  class=”form-control-static2” href="/index">Home</a>  
- </aside>
-   </form>
-   </section>
-   </div>
--->
 
-
+<!-- sezione contac us   -->
   <div class="container">
     <div class="section">
 
@@ -305,7 +268,7 @@
     <div class="section no-pad-bot">
       <div class="container">
         <div class="row center">
-          <h5 class="header col s12 light white-text">Looking a modern responsive front-end framework</h5>
+          <h5 class="header col s12 light white-text">Non avere limiti  I tuoi obiettivi aspettano</h5>
         </div>
     <div class="parallax"><img src="back2012.jpg" alt="Unsplashed background img 3"></div>
    </div>
@@ -347,6 +310,18 @@
   ga('create', 'UA-93827509-1', 'auto');
   ga('send', 'pageview');
 
+</script>
+
+<!-- script personalizzazione jquery  -->
+<script>
+
+ $('.button').click(function () {
+    $('#elenco').show();
+    });
+
+ $('#nascondi').click(function () {
+    $('#elenco').hide();
+    });
 </script>
 
   </body>
