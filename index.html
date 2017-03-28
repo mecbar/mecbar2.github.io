@@ -11,6 +11,7 @@
   <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="https://fonts.googleapis.com/css?family=Raleway|Satisfy" rel="stylesheet">
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style2.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
@@ -137,6 +138,29 @@
     </div>
    </div>
   </div>
+<!--  
+<section id="codice">
+
+
+ <div class="grid-container">
+  <div class="item-2">
+   <pre> 
+    <img src="foto/es_angular_bind.jpg" width="88%" height="400px">
+    </pre>
+  </div>
+  <div class="item-5">
+   <pre> 
+    <img src="foto/es_ angular_elenco.jpg" width="80%" height="500px" >
+   </pre>
+  </div>
+    <div class="item-1">
+   <pre> 
+    <img src="foto/es_ angular_script.jpg" width="80%" height="500px" >
+   </pre>
+  </div>
+
+ </div>
+</section>  -->
 
 <!-- esempio angularls -->
 <br>
@@ -158,17 +182,25 @@
 </div>
 </div>
 </div>
-
+<!--
+<div class="row center">
+   <pre> 
+    <img src="foto/es_angular_bind.jpg" width="90%" height="400px">
+    </pre>
+</div>
+-->
 
 <!-- angular vista elenco nazioni -->
 
 <div class="angular2">
    <br>
-   <h3 class="center brown-text"> Elenco Nazioni : esempio creato con AngularJs <cite>(direttive ng-repeat ng-show) </cite> </h3>
+   <h3 class="center brown-text"> Elenco Nazioni : esempio creato con AngularJs  </h3>
  <p class="center"> <button id="but1" class="button" name="button"> Visualizza  elenco </button>  
  <button id="nascondi" class="button" name="button"> Nascondi elenco </button> 
  </p>
-  <br>
+ <br>
+  <p class="text" > Codice html per visualizzare i dati che ng-controller carica dal server al browser e la  
+    direttiva ng-repeat crea la tabella nel rispetto del pattern MVC  </p>
 <div id="elenco">
  <table  style="width:100%" ng-controller="NationListCtrl">
    <tr>
@@ -181,14 +213,19 @@
         <td>  {{ key +1 }} </td> 
         <td> {{ value.code }} </td>
         <td> {{ value.name }} </td>
- <!--  <tbody ng-repeat="nation in nations">
-     <td>{{nation.code}} </td>
-     <td>{{nation.name}} </td> 
-  --> 
-   </tbody>
- </table>
-
+       </tbody>
+  </table>
  </div>
+
+ <div class="row center">
+   <img src="foto/es_ angular_elenco.jpg" width="90%" height="400px">
+ </div>
+
+ <div class="row center">
+   <p class="text"> Codice javascript per caricare file nation.json nel browser ( $scope.nations )  </p>
+    <img src="foto/es_angular_script.jpg" width="90%" height="400px">
+  </div>
+
 
 </div>
 </section>
@@ -251,7 +288,7 @@
      
      <div class="row center"> 
     <div class="video1">
-      <iframe width="100%" height="300" src="https://www.youtube.com/embed/s7VD-Athq_w" ></iframe>
+      <iframe width="533" height="300" src="https://www.youtube.com/embed/s7VD-Athq_w" ></iframe>
      </div>
     </div>
   
@@ -370,6 +407,11 @@
    });
 
    $('.carousel slide').carousel({fullWidth: false});
+
+
+
+ 
+
 
 </script>
 
