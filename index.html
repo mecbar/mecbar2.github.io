@@ -15,6 +15,9 @@
   <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+ <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+ <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script> 
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
  
   <script src="js/app.js"></script> 
 
@@ -36,11 +39,17 @@
     <nav>
       <div class="nav-wrapper white">
         <a href="#!" class="brand-logo">Mecbar</a>
+        <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
         <ul class="right hide-on-med-and-down">
           <li><a href="#dev">Development</a></li>
           <li><a href="#voy">Voyager</a></li>
           <li><a href="#us">Contatti</a></li>
         </ul>
+        <ul class="side-nav" id="mobile-demo">
+          <li><a href="#dev">Development</a></li>
+          <li><a href="#voy">Voyager</a></li>
+          <li><a href="#us">Contatti</a></li>
+      </ul>
       </div>
     </nav>
   </div>
@@ -121,7 +130,7 @@
      <div class="container">
       <div class="row">
       <div class="section  center">
-        <h4 class="center brown-text">Esempio richiesta di inserire mail per iscriversi nella Mailing List</h4>
+        <h4 class="center brown-text">Esempio richiesta mail per iscriversi nella Mailing List</h4>
        <div class="input-field col s12 l6 offset-l3">
            <!-- inserire email x mail list-->
            <br>
@@ -138,29 +147,84 @@
     </div>
    </div>
   </div>
-<!--  
+  <br><br>
+
 <section id="codice">
-
-
+ <div class="rowcenter" id="dev">
+   <br>
+    <h5 class="header col s12 center light">Creare un progetto con il Web Framework AngularJs </h5>
+  <br>
+ </div> 
+   <br><br>
  <div class="grid-container">
   <div class="item-2">
    <pre> 
-    <img src="foto/es_angular_bind.jpg" width="88%" height="400px">
-    </pre>
+   
+                           Per verificare versione sw installato  digitare :
+                            - bower  --version  
+                            - karma  --version 
+                              
+                            - creare directory dove inserie file es. ProgettoA poi digitare :
+                            - cd ProgettoA
+                            - git init
+      - yo angular –minsafe –karma  (il prametro minsafe è necessario per essere minificato)
+      - bower install  (modifica tutti i file necessari)
+      - npm install    (installa tutte le dipendenze di js)
+      - karma init     (chiede i parametri x test es. phantomjs)
+         
+      - il file karma.conf.js contiene i parametri di configurazione 
+      - il comando  :  grunt karma       ci permette di verificare se tutto ok  
+ 
+      - il comando  :  grunt server      attiva il web server (localhost:9000 )   </pre>
   </div>
   <div class="item-5">
-   <pre> 
-    <img src="foto/es_ angular_elenco.jpg" width="80%" height="500px" >
-   </pre>
+   <pre>
+ A questo punto dobbiamo creare 
+   il controler e la views :
+   - yo angular:controller nome_controller
+       es. ProgettoACtrl
+   - yo angular:view  nome_view 
+       es. ProgettoAView 
+           
+  
+  
+   - git status    per verificare i file creati 
+           nel repository locale
+ 
+   - Creare nella cartella del progetto es. PreogettoA 
+           la sub directory  /app/data  
+     ora in  c:ProgettoA/app/data  inserire il file json 
+           dove ci sono i dati pre l'applicazione 
+       </pre>
   </div>
     <div class="item-1">
-   <pre> 
-    <img src="foto/es_ angular_script.jpg" width="80%" height="500px" >
-   </pre>
-  </div>
+      <pre>
+      Preparare ambiente di lavoro 
+      -  npm install –g nodejs
+      -  npm install –g bower
+      -  npm install –g grunt-cli
+      -  npm install –g yo 
+      -  npm install –g generator-angular
+      -  npm install –g karma
+      -  Install phantomjs(browser dedicato ai test)
+      </pre>
+    </div>
+<div class="item-6">
+      <pre>
+  Ci siamo ..... ora con un editor puoi modificare le views
+    e i controller per il tuo  
+      Front-end Framework con le direttive di AngularJs :
+             - ng-app
+             - ng-controller
+             - ng-model
+             - ng-repeat
+             - ng-show
+             - ed inoltre i servizi + filtri ecc ....
 
+      </pre>
+    </div>
  </div>
-</section>  -->
+</section>  
 
 <!-- esempio angularls -->
 <br>
@@ -291,49 +355,22 @@
       <iframe width="533" height="300" src="https://www.youtube.com/embed/s7VD-Athq_w" ></iframe>
      </div>
     </div>
-  
-  <!-- FOTO SLIDE -->
+    <br>
 
-  <!--
+
+  <!-- FOTO SLIDE -->
+  
    <div class="carousel">
-    <a class="carousel-item" href="#one!"><img src="foto/norv1.jpg" style="width:100%"></a>
-    <a class="carousel-item" href="#two!"><img src="foto/norv2.jpg" style="width:100%"></a>
-    <a class="carousel-item" href="#three!"><img src="foto/norv3.jpg" style="width:100%"></a>
+    <a class="carousel-item" href="#one!"><img src="foto/paesaggio1.jpg" style="width:100%"></a>
+    <a class="carousel-item" href="#two!"><img src="foto/paesaggio2.jpg"  style="width:100%"></a>
+    <a class="carousel-item" href="#three!"><img src="foto/paesaggio3.jpg" style="width:100%"></a>
     <a class="carousel-item" href="#four!"><img src="foto/norv4.jpg" style="width:100%"></a>
     <a class="carousel-item" href="#five!"><img src="foto/norv5.jpg" style="width:100%"></a>
     <a class="carousel-item" href="#five!"><img src="foto/norv6.jpg" style="width:100%"></a>
     <a class="carousel-item" href="#five!"><img src="foto/norv7.jpg" style="width:100%"></a>
   </div>
-  -->
+  
 
-
-<div id="carouselExampleIndicators" class="carousel slider" data-ride="carousel">
- <!-- <ol class="carousel-indicators">
-    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-  </ol>
- -->
-  <div class="carousel-inner" role="listbox">
-    <div class="carousel-item active">
-      <img class="d-block img-fluid" src="foto/paesaggio1.jpg" alt="First slide">
-    </div>
-    <div class="carousel-item">
-      <img class="d-block img-fluid" src="foto/paesaggio2.jpg" alt="Second slide">
-    </div>
-    <div class="carousel-item">
-      <img class="d-block img-fluid" src="foto/paesaggio3.jpg" alt="Third slide">
-    </div>
-  </div>
-  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
-</div>
 
    <div class="rowcenter">
    <br>
@@ -361,7 +398,7 @@
           <p class="grey-text text-lighten-4">Don't Warry Be Happy</p>
         </div>
         <div class="col l2 s2">
-          <a  class="white-text" href="#head"  >Torna su <i class="material-icons">arrow_upward</i></a>
+          <a  class="white-text" href="#head"  >Top<i class="material-icons">arrow_upward</i></a>
         </div>
        </div>
      </div>
@@ -408,7 +445,7 @@
 
    $('.carousel slide').carousel({fullWidth: false});
 
-
+   $(".button-collapse").sideNav();
 
  
 
